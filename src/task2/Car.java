@@ -127,12 +127,7 @@ public class Car {
         private String color;
         private int year;
 
-        public CarBuilder(String brand, String model, double maxSpeed, FuelType fuelType, int year) {
-            this.brand = brand;
-            this.model = model;
-            this.maxSpeed = maxSpeed;
-            this.fuelType = fuelType;
-            this.year = year;
+        public CarBuilder() {
         }
 
         public CarBuilder color(String color) {
@@ -140,13 +135,14 @@ public class Car {
             return this;
         }
 
+
         public Car build() {
             return new Car(brand, model, 0, maxSpeed, fuelType, color, year);
         }
     }
 
     public static void main(String[] args) {
-        Car car = new CarBuilder("Lexus", "X8", 300, FuelType.GASOLINE, 2018)
+        Car car = new CarBuilder()
                 .color("green")
                 .build();
 
