@@ -13,41 +13,10 @@ public class Main {
 
         System.out.println("Info about person 1:");
         System.out.println(person1.getinfo());
-
         System.out.println("Info about person 2:");
-
         System.out.println(person2.getinfo());
-
         System.out.println("Info about person 3:");
         System.out.println(person3.getinfo());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

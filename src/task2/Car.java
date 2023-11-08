@@ -130,11 +130,34 @@ public class Car {
         public CarBuilder() {
         }
 
-        public CarBuilder color(String color) {
+        public CarBuilder withColor(String color) {
             this.color = color;
             return this;
         }
+        public CarBuilder withBrand(String brand){
+            this.brand = brand;
+            return this;
 
+
+        }
+        public CarBuilder withModel(String Model){
+            this.model=model;
+            return this;
+        }
+
+        public CarBuilder withYear(int year){
+            this.year= year;
+            return this;
+        }
+        public CarBuilder withMaxSpeed(int maxSpeed){
+            this.maxSpeed=maxSpeed;
+            return this;
+        }
+
+        public CarBuilder withFuelType(FuelType fuelType){
+            this.fuelType=fuelType;
+            return this;
+        }
 
         public Car build() {
             return new Car(brand, model, 0, maxSpeed, fuelType, color, year);
@@ -143,7 +166,11 @@ public class Car {
 
     public static void main(String[] args) {
         Car car = new CarBuilder()
-                .color("green")
+                .withYear(2022)
+                .withBrand("Nissan")
+                .withColor("green")
+                .withFuelType(FuelType.DIESEL)
+                .withMaxSpeed(220)
                 .build();
 
         System.out.println(car.carInfo());
